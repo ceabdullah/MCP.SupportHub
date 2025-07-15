@@ -1,0 +1,40 @@
+﻿.comment-thread-panel {
+    background: #f9f9f9;
+    padding: 16px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.comment-bubble {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.timestamp {
+    font-size: 10px;
+    color: #888;
+    text-align: right;
+}
+
+.comment-input {
+    width: 100%;
+    margin-top: 12px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.comment-submit {
+    margin-top: 8px;
+    background-color: #0078D7;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}

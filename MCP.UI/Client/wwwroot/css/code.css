@@ -1,0 +1,15 @@
+﻿.code-context-panel {
+    margin-top: 20px;
+    background: #f8f8ff;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: Consolas, monospace;
+}
+
+.code-block {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+}

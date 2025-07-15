@@ -1,0 +1,53 @@
+﻿@page "/topology"
+@using MCP.Core.Models
+@using MCP.UI.Components
+@inject HttpClient Http
+
+<TopologyGraphViewer Nodes="@Nodes" OnNodeSelected="OnNodeClick" />
+
+@if (SelectedNode is not null)
+{
+    <CommentThreadPanel Comments="@ThreadComments" NodeId="@SelectedNode.Id" />
+    <CodeContextViewer NodeId="@SelectedNode.Id" CodeText="@CodePreview" Loading="@CodeLoading" />
+
+    @if (DiagnosticSummary is not null)
+    {
+        <div class="diagnostic-summary-box">
+            <h5>AI Diagnostic Summary:</h5>
+            <p>@DiagnosticSummary.Content</p>
+            <small>Severity: @DiagnosticSummary.Metadata["Severity"]</small>
+        </div>
+    }
+}
+
+@code {
+    List<IssueNode> Nodes = new();
+    IssueNode? SelectedNode;
+    List<CommentEntry> ThreadComments = new();
+    string CodePreview = "";
+    bool CodeLoading = false;
+    ModelContext? DiagnosticSummary;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Nodes = await Http.GetFromJsonAsync<List<IssueNode>>("/api/topology/nodes");
+    }
+
+    async Task OnNodeClick(IssueNode node)
+    {
+        SelectedNode = node;
+        CodeLoading = true;
+
+        var threadTask = Http.GetFromJsonAsync<List<CommentEntry>>($"/api/comments/{node.Id}");
+        var codeTask = Http.GetStringAsync($"/api/code/{node.Id}");
+        var diagnosticTask = Http.PostAsJsonAsync("/api/diagnostics", node);
+
+        ThreadComments = await threadTask;
+        CodePreview = await codeTask;
+
+        var summaryResponse = await diagnosticTask.Result.Content.ReadFromJsonAsync<ModelContext>();
+        DiagnosticSummary = summaryResponse;
+
+        CodeLoading = false;
+    }
+}

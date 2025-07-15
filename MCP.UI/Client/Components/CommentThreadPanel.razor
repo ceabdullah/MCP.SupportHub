@@ -1,0 +1,53 @@
+﻿@namespace MCP.UI.Components
+@using MCP.Core.Models
+@inject HttpClient Http
+
+<div class="comment-thread-panel">
+    <h4>Discussion on Node: @NodeId</h4>
+
+    @if (Comments?.Count > 0)
+    {
+        @foreach (var comment in Comments)
+        {
+            <div class="comment-bubble">
+                <b>@comment.Author</b>: @comment.Message
+                <div class="timestamp">@comment.Timestamp.ToLocalTime().ToString("g")</div>
+            </div>
+        }
+    }
+    else
+    {
+        <p><em>No comments yet. Be the first to say something.</em></p>
+    }
+
+    <textarea class="comment-input"
+              @bind="NewCommentText"
+              placeholder="Add your comment..."
+              rows="3" />
+    <button class="comment-submit" @onclick="SubmitComment">Send</button>
+</div>
+
+@code {
+    [Parameter] public List<CommentEntry> Comments { get; set; } = new();
+    [Parameter] public string NodeId { get; set; } = string.Empty;
+
+    string NewCommentText = "";
+
+    async Task SubmitComment()
+    {
+        if (!string.IsNullOrWhiteSpace(NewCommentText))
+        {
+            var newComment = new CommentEntry
+            {
+                Author = "User",
+                Message = NewCommentText,
+                RelatedToNodeId = NodeId
+            };
+
+            await Http.PostAsJsonAsync($"/api/comments/{NodeId}", newComment);
+
+            Comments.Add(newComment);
+            NewCommentText = "";
+        }
+    }
+}

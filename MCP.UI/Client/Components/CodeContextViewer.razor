@@ -1,0 +1,22 @@
+﻿@namespace MCP.UI.Components
+@using MCP.Core.Models
+
+@code {
+    [Parameter] public string NodeId { get; set; } = string.Empty;
+    [Parameter] public string CodeText { get; set; } = string.Empty;
+
+    [Parameter] public bool Loading { get; set; } = false;
+}
+
+<div class="code-context-panel">
+    <h4>Code Context: @NodeId</h4>
+
+    @if (Loading)
+    {
+        <p><em>Loading code...</em></p>
+    }
+    else
+    {
+        <pre class="code-block">@CodeText</pre>
+    }
+</div>
