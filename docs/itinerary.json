@@ -1,0 +1,65 @@
+[
+  {
+    "dayNumber": 1,
+    "date": "2026-09-14",
+    "title": "Arrival in Istanbul",
+    "location": "Istanbul, Türkiye",
+    "summary": "Land at Istanbul Airport, check into a hotel in Sultanahmet, and ease into the trip with a golden-hour walk along the Galata Bridge. Finish the evening with mezes and fresh fish at a Karaköy lokanta while ferries glide across the Bosphorus.",
+    "imageUrl": "https://picsum.photos/seed/istanbul-arrival/900/560",
+    "highlights": ["Galata Bridge at sunset", "Karaköy dinner", "First view of the Bosphorus"]
+  },
+  {
+    "dayNumber": 2,
+    "date": "2026-09-15",
+    "title": "Old City Landmarks",
+    "location": "Istanbul, Türkiye",
+    "summary": "A full day in the historic peninsula: Hagia Sophia at opening time, the Blue Mosque, the underground cisterns, and Topkapı Palace with its views over the Golden Horn. Wrap up haggling for spices and Turkish delight in the Grand Bazaar.",
+    "imageUrl": "https://picsum.photos/seed/istanbul-oldcity/900/560",
+    "highlights": ["Hagia Sophia", "Topkapı Palace", "Grand Bazaar shopping"]
+  },
+  {
+    "dayNumber": 3,
+    "date": "2026-09-16",
+    "title": "Flight to Cappadocia",
+    "location": "Göreme, Cappadocia",
+    "summary": "Morning flight to Kayseri and transfer to a cave hotel in Göreme. Spend the afternoon exploring the Göreme Open-Air Museum's rock-cut churches, then watch the fairy chimneys turn pink from Sunset Point with a glass of local wine.",
+    "imageUrl": "https://picsum.photos/seed/cappadocia-arrival/900/560",
+    "highlights": ["Cave hotel check-in", "Open-Air Museum", "Sunset over fairy chimneys"]
+  },
+  {
+    "dayNumber": 4,
+    "date": "2026-09-17",
+    "title": "Balloons at Dawn",
+    "location": "Göreme, Cappadocia",
+    "summary": "Pre-dawn wake-up for a hot-air balloon flight over the valleys as hundreds of balloons rise with the sun. After a late breakfast, descend into the eight-level underground city of Derinkuyu and hike the sculpted curves of Rose Valley.",
+    "imageUrl": "https://picsum.photos/seed/cappadocia-balloons/900/560",
+    "highlights": ["Hot-air balloon flight", "Derinkuyu underground city", "Rose Valley hike"]
+  },
+  {
+    "dayNumber": 5,
+    "date": "2026-09-18",
+    "title": "Pamukkale's White Terraces",
+    "location": "Pamukkale, Denizli",
+    "summary": "Travel day ending at the cotton-white travertine terraces of Pamukkale. Wade barefoot through the warm thermal pools, then wander the ruins of Hierapolis above them and swim among sunken Roman columns in Cleopatra's Antique Pool.",
+    "imageUrl": "https://picsum.photos/seed/pamukkale-terraces/900/560",
+    "highlights": ["Travertine terraces", "Hierapolis ruins", "Cleopatra's Antique Pool"]
+  },
+  {
+    "dayNumber": 6,
+    "date": "2026-09-19",
+    "title": "Ancient Ephesus",
+    "location": "Selçuk, İzmir",
+    "summary": "Walk the marble streets of Ephesus, one of the best-preserved ancient cities in the Mediterranean: the Library of Celsus, the Great Theatre, and the terraced houses with their mosaics. Evening flight from İzmir back to Istanbul.",
+    "imageUrl": "https://picsum.photos/seed/ephesus-ruins/900/560",
+    "highlights": ["Library of Celsus", "Great Theatre", "Terrace houses mosaics"]
+  },
+  {
+    "dayNumber": 7,
+    "date": "2026-09-20",
+    "title": "Bosphorus Farewell",
+    "location": "Istanbul, Türkiye",
+    "summary": "A relaxed final day: a Bosphorus cruise past Ottoman palaces and waterfront mansions, a proper Turkish breakfast in Beşiktaş, and one last çay in a rooftop café before the evening flight home.",
+    "imageUrl": "https://picsum.photos/seed/bosphorus-cruise/900/560",
+    "highlights": ["Bosphorus cruise", "Turkish breakfast", "Rooftop çay farewell"]
+  }
+]
